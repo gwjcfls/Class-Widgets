@@ -27,7 +27,7 @@ jobs:
         
     - name: Download missing DLL
       run: |
-        curl -L -o C:\Windows\System32\api-ms-win-shcore-scaling-l1-1-1.dll https://uploader.us.kg/raw/public/api-ms-win-shcore-scaling-l1-1-1.dll
+        curl -L -o C:\Windows\SysWOW64\downlevel\api-ms-win-shcore-scaling-l1-1-1.dll https://uploader.us.kg/raw/public/api-ms-win-shcore-scaling-l1-1-1.dll
     
     - name: Build executable
       run: |
