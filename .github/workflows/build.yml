@@ -25,10 +25,10 @@ jobs:
         pip install -r requirements.txt --use-deprecated=legacy-resolver
         pip install pyinstaller
         
-    - name: Download missing DLL
+    - name: Install Qt
       run: |
-        curl -L -o C:\Windows\System32\api-ms-win-shcore-scaling-l1-1-1.dll https://uploader.us.kg/raw/public/api-ms-win-shcore-scaling-l1-1-1.dll
-        regsvr32 %windir%\System32\api-ms-win-shcore-scaling-l1-1-1.dll
+        choco install qt5-default -y
+        echo "C:\Qt\5.15.2\msvc2019_64\bin" >> $GITHUB_PATH
       
     - name: Build executable
       run: |
